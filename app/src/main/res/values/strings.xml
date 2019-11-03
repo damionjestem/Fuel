@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DLZaliczenie</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello">Wpisz dane aby obliczyć spalanie…</string>
+    <string name="milage">Dystans</string>
+    <string name="fuel_consumption">Zużyte paliwo</string>
+    <string name="mpg">średnie spalanie</string>
+    <string name="count">Oblicz</string>
+</resources>
