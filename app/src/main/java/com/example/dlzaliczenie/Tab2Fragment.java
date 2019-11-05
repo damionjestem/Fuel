@@ -35,7 +35,7 @@ public class Tab2Fragment extends Fragment {
                         || fuelText.getText().toString().isEmpty() ){
                     textMpG.setText(R.string.textMissingInfo);
                 } else
-                    textMpG.setText(String.valueOf(mpgCount(milageText,fuelText)));
+                    textMpG.setText(String.valueOf(mpgCount(milageText,fuelText)).concat(" l/100km"));
             }
         });
 

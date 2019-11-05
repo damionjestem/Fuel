@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textHello"
@@ -27,13 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
         android:autofillHints="0"
         android:ems="10"
         android:hint="@string/milage"
         android:inputType="numberDecimal"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textHello"
         tools:ignore="UnusedAttribute" />
@@ -44,14 +41,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
         android:autofillHints="0"
         android:ems="10"
         android:hint="@string/fuel_consumption"
         android:inputType="numberDecimal"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editMilage"
         tools:ignore="UnusedAttribute" />
@@ -77,5 +71,30 @@
         android:text="@string/count"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editFuel" />
+
+    <TextView
+        android:id="@+id/textMilageUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="km"
+        app:layout_constraintBottom_toBottomOf="@+id/editMilage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editMilage"
+        app:layout_constraintTop_toTopOf="@+id/editMilage" />
+
+    <TextView
+        android:id="@+id/textFuelUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="l"
+        app:layout_constraintBottom_toBottomOf="@+id/editFuel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/editFuel"
+        app:layout_constraintTop_toTopOf="@+id/editFuel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
