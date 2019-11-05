@@ -15,18 +15,17 @@ public class Tab2Fragment extends Fragment {
 
     private static final String TAG = "fragment tab1";
 
-    private Button btnSubmit;
     private EditText milageText, fuelText;
     private TextView textMpG;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_one, container, false);
+        View view = inflater.inflate(R.layout.fragment_two, container, false);
 
-        milageText = (EditText) view.findViewById(R.id.editMilage);
-        fuelText = (EditText) view.findViewById(R.id.editFuel);
-        textMpG = (TextView) view.findViewById(R.id.textMpG);
-        btnSubmit = (Button) view.findViewById(R.id.buttonCount);
+        milageText = view.findViewById(R.id.editMilage);
+        fuelText = view.findViewById(R.id.editFuel);
+        textMpG = view.findViewById(R.id.textMpG);
+        Button btnSubmit = view.findViewById(R.id.buttonCount);
 
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +48,7 @@ public class Tab2Fragment extends Fragment {
      * @param milage  B
      * @return double (A/B)*100
      */
-    public double mpgCount (EditText fuel, EditText milage) {
+    private double mpgCount (EditText fuel, EditText milage) {
         Double m = Double.valueOf(milage.getText().toString());
         Double f = Double.valueOf(fuel.getText().toString());
         if(m>=0 && f>0)
