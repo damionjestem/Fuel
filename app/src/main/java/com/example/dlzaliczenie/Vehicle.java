@@ -9,7 +9,7 @@ public class Vehicle {
     @NonNull
     @Override
     public String toString() {
-        return super.toString();
+        return vName;
     }
 
     public Vehicle(){

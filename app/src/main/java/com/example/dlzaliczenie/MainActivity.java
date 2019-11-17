@@ -38,20 +38,11 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         adapter = new TabAdapter(getSupportFragmentManager());
-        adapter.addFragment(new Tab1Fragment(), "Tab 1");
+        adapter.addFragment(new Tab1Fragment(), "Pojazdy");
         adapter.addFragment(new Tab2Fragment(), "Policz spalanie");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Autor: Damian Lesiewicz", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
